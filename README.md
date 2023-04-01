@@ -33,6 +33,7 @@ _Uma lista dos comandos Git mais usados_
 | `git checkout [nome da branch]` | Seleciona uma branch |
 | `git checkout -` | Muda para a última branch |
 | `git checkout -- [nome-arquivo.txt]` | Descarta modificações de um arquivo |
+| `git checkout -- .` | Descarta modificações de todos os arquivos |
 | `git merge [nome da branch]` | Faz um merge de uma branch na branch atual |
 | `git merge [source branch] [branch alvo]` | Faz um merge de uma branch em outra branch |
 | `git stash` | Tirar o estado sujo do seu diretório de trabalho |
@@ -43,13 +44,20 @@ _Uma lista dos comandos Git mais usados_
 | Comando | Descrição |
 | ------- | --------- |
 | `git push origin [nome da branch]` | Enviar uma branch para seu repositório remoto |
-| `git push -u origin [nome da branch]` | Envia as alterações da branch informada para um repositório remoto (and selecionar a branch) |
+| `git push -f origin main]` | Commita descartando as diferenças presentes no repositório remoto |
+| `git push -u origin [nome da branch]` | Envia as alterações da branch informada para um repositório remoto (e selecionar a branch) |
 | `git push` | Envia as alterações para o repositório remoto (branch atual) |
 | `git push origin --delete [nome da branch]` | Deletar uma branch remota |
+| `git push --set-upstream origin [nome da branch]` | Subir a branch local para o repositório remoto |
 | `git pull` | Atualiza o repositório local para o último commit |
 | `git pull origin [nome da branch]` | Recebe alterações do repositório remoto |
 | `git remote add origin ssh://git@github.com/[usuario]/[nome-repositorio].git` | Adicionar um repositório remoto |
 | `git remote set-url origin ssh://git@github.com/[usuario]/[nome-repositorio].git` | Seta um repositório da origin branch para o SSH |
+| `git remote -v` | Permite visualizar a URL vinculada ao repositório local |
+| `git reset` | Desfaz todas as alterações realizadas |
+| `git reset --soft Head~1` | Retorna ao commit mantendo as alterações |
+| `git reset --hard [código do commit]` | Retorna ao commit destruindo todas as alterações realizadas após ele |
+| `git clean -df` |  Remove arquivos não rastreados no repositório Git local |
 
 ### Inspeção & Comparação
 
@@ -57,5 +65,7 @@ _Uma lista dos comandos Git mais usados_
 | ------- | --------- |
 | `git log` | Ver modificações |
 | `git log --summary` | Ver modificações (detalhadas) |
+| `git log --oneline` | Ver modificações (linha única) |
+| `git reflog` | mostra um histórico detalhado de todos os commits e ações realizadas no repositório Git local, incluindo aqueles que foram removidos |
 | `git diff [branch original] [branch alvo]` | Visualizar alterações antes de mesclar |
 
