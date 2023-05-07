@@ -44,7 +44,7 @@ _Uma lista dos comandos Git mais usados_
 | Comando | Descrição |
 | ------- | --------- |
 | `git push origin [nome da branch]` | Enviar uma branch para seu repositório remoto |
-| `git push -f origin main]` | Commita descartando as diferenças presentes no repositório remoto |
+| `git push -f origin main` | Commita descartando as diferenças presentes no repositório remoto |
 | `git push -u origin [nome da branch]` | Envia as alterações da branch informada para um repositório remoto (e selecionar a branch) |
 | `git push` | Envia as alterações para o repositório remoto (branch atual) |
 | `git push origin --delete [nome da branch]` | Deletar uma branch remota |
